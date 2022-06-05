@@ -23,9 +23,9 @@ mousefollow.Size = UDim2.new(0, 16, 0, 10)
 
 circle.Name = "circle"
 circle.Parent = mousefollow
-circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-circle.BackgroundTransparency = 1.000
-circle.Position = UDim2.new(-9.63012314, 0, -16.1855831, 0)
+circle.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+circle.BackgroundTransparency = 0.900
+circle.Position = UDim2.new(-2.94262314, 0, -12.6855831, 0)
 circle.Size = UDim2.new(0, 332, 0, 332)
 
 UICorner.CornerRadius = UDim.new(0, 255)
@@ -33,7 +33,7 @@ UICorner.Parent = circle
 
 -- Scripts:
 
-local function CFJUJX_fake_script() -- mousefollow.LocalScript 
+local function IREIU_fake_script() -- mousefollow.LocalScript 
 	local script = Instance.new('LocalScript', mousefollow)
 
 	local mouse = game.Players.LocalPlayer:GetMouse() -- get mouse
@@ -50,4 +50,4 @@ local function CFJUJX_fake_script() -- mousefollow.LocalScript
 	end)
 	
 end
-coroutine.wrap(CFJUJX_fake_script)()
+coroutine.wrap(IREIU_fake_script)()
