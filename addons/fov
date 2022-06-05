@@ -18,13 +18,13 @@ mousefollow.Name = "mousefollow"
 mousefollow.Parent = fovcircle
 mousefollow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 mousefollow.BackgroundTransparency = 1.000
-mousefollow.Position = UDim2.new(0.472000003, 0, 0.442999989, 0)
-mousefollow.Size = UDim2.new(0, 16, 0, 10)
+mousefollow.Position = UDim2.new(0.471435994, 0, 0.442999989, 0)
+mousefollow.Size = UDim2.new(0, 17, 0, 10)
 
 circle.Name = "circle"
 circle.Parent = mousefollow
 circle.BackgroundColor3 = Color3.fromRGB(43, 75, 255)
-circle.BackgroundTransparency = 0.900
+circle.BackgroundTransparency = 0.800
 circle.Position = UDim2.new(-9.44262314, 0, -14.5855827, 0)
 circle.Size = UDim2.new(0, 332, 0, 332)
 
@@ -33,7 +33,7 @@ UICorner.Parent = circle
 
 -- Scripts:
 
-local function BOWLC_fake_script() -- mousefollow.LocalScript 
+local function EZBD_fake_script() -- mousefollow.LocalScript 
 	local script = Instance.new('LocalScript', mousefollow)
 
 	local mouse = game.Players.LocalPlayer:GetMouse() -- get mouse
@@ -50,4 +50,4 @@ local function BOWLC_fake_script() -- mousefollow.LocalScript
 	end)
 	
 end
-coroutine.wrap(BOWLC_fake_script)()
+coroutine.wrap(EZBD_fake_script)()
