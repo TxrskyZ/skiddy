@@ -1,0 +1,53 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local fovcircle = Instance.new("ScreenGui")
+local mousefollow = Instance.new("Frame")
+local circle = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+fovcircle.Name = "fovcircle"
+fovcircle.Parent = game.CoreGui
+fovcircle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+mousefollow.Name = "mousefollow"
+mousefollow.Parent = fovcircle
+mousefollow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mousefollow.BackgroundTransparency = 1.000
+mousefollow.Position = UDim2.new(0.472000003, 0, 0.442999989, 0)
+mousefollow.Size = UDim2.new(0, 16, 0, 10)
+
+circle.Name = "circle"
+circle.Parent = mousefollow
+circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+circle.BackgroundTransparency = 1.000
+circle.Position = UDim2.new(-9.63012314, 0, -16.1855831, 0)
+circle.Size = UDim2.new(0, 332, 0, 332)
+
+UICorner.CornerRadius = UDim.new(0, 255)
+UICorner.Parent = circle
+
+-- Scripts:
+
+local function CFJUJX_fake_script() -- mousefollow.LocalScript 
+	local script = Instance.new('LocalScript', mousefollow)
+
+	local mouse = game.Players.LocalPlayer:GetMouse() -- get mouse
+	local rs = game:GetService("RunService")  -- get run service
+	
+	
+	
+	rs.RenderStepped:Connect(function() -- every time  something "happens" this will fire
+		-- every time we move the mouse, the ui will follow it
+		local textlabel = script.Parent -- get the ui you are trying to move 
+		textlabel.Position = UDim2.new(0,mouse.X,0,mouse.Y) -- moves the ui where the mouse is
+	
+	
+	end)
+	
+end
+coroutine.wrap(CFJUJX_fake_script)()
